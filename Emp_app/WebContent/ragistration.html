@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Ragistration</title>
+<style>
+.main_header{
+margin:10 px;
+padding: 10px 550px;
+	background-color: rgb(217,236,244);
+}
+.main_footer{
+
+padding: 10px 550px;
+background-color: rgb(217,236,244);
+}
+div.main_login_form{
+background-image: url("https://i.pinimg.com/originals/87/bd/39/87bd39200c3d4770b36b4c5f92a1a428.gif");
+border-radius: 60px;
+padding : 40px 30px;
+padding-right : 10px;
+max-height :auto;
+max-width :360px;
+margin-left:390px;
+border-style:groove;
+border: 4px solid blue;  
+background-color: lightblue;  
+font-size: 20px;  
+color: red;
+}
+body{
+margin:10px;
+}
+#box{
+float:left;  
+width:25%; 
+height:auto;
+}
+
+.list-group{
+max-height :auto;
+max-width :250px;
+}
+div.container{
+max-height :400;
+padding-top: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: 1px;
+    margin-left: 1px;
+}
+
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</script>
+<script>
+function myFunction(){
+var name = document.getElementById("fname").value; 
+var namelantg=name.length;
+if(namelantg==0){
+alert("should not null");
+}
+ else if(namelantg<5){
+alert("should not less then 5");
+}
+else
+{
+	
+//alert("Welcome : " +name);
+}
+}
+
+function pws(){
+var pws1 = document.getElementById("pws1").value;  
+var pws2 = document.getElementById("pws2").value;
+var plengh=pws1.length;
+
+if(plengh==0){
+alert("should not null");
+}
+ else if(plengh<5){
+alert("should not less then 5");
+}
+
+if(pws1!=pws2){
+alert("Password not mached !");
+}
+}
+</script>
+<meta charset="utf-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+
+</head>
+<header class="main_header">
+<h3>Welcome </h3>
+</header>
+<body>
+<form action="#" >
+  
+  <div id="box">
+  
+  <div class="container">  
+   <div class="list-group"> 
+<a href="dashboard.html" class="list-group-item ">DashBord</a>  
+    <a href="ragistration.html" class="list-group-item active">Ragistration</a>  
+    <a href="empList.html" class="list-group-item">List Of Employee</a>  
+    <a href="#" class="list-group-item">Log Out</a>  
+  </div>  
+</div>
+  </div>
+  <div class="main_login_form">
+  <label for="fname">First name:</label>
+  <br>
+  <input type="text" id="fname" name="fname" onchange="myFunction()">
+  <br>
+  <label for="lname">Password</label>
+  <br>
+  <input type="password" id="pws1" name="pws1">
+  <br>
+  <label for="lname">Re-Password</label>
+  <br>
+  <input type="password" id="pws2" name="pws2" onchange="pws()" >
+  <br>
+  <input type="radio" id="gen" name="male"  checked>MALE
+  <input type="radio" id="gen2" name="male">FE-MALE
+  <br>
+  <label for="gmail">G-mail</label>
+  <br>
+  <input type="text" id="gmail" name="gmail">
+  <br>
+  <input type="submit" id="btn_submit" name="Ok" >
+  </div>
+  
+</form>
+</body>
+<footer class="main_footer">
+<h3><p>Contact us<br> 
+	7032475426<br>
+	Awzpact India LLC<br>
+	462030</p> </h3>
+</footer>
+</html>
